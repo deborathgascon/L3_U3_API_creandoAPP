@@ -51,7 +51,7 @@ require([
             /*
              * Step: Wire the button's onclick event handler
              */
-            on(dom.byID("btnLocate"), "click", doAddressToLocations);
+            on(dom.byId("btnLocate"), "click", doAddressToLocations);
           
             /*
            *  object.on ("evento", doAddressToLocations);
@@ -60,7 +60,7 @@ require([
             /*
              * Step: Wire the task's completion event handler
              */
-            taskLocator.on("adress-to-locations-complete", showResults);
+            taskLocator.on("address-to-locations-complete", showResults);
 
 
             function doAddressToLocations() {
@@ -70,7 +70,7 @@ require([
                  * Step: Complete the Locator input parameters
                  */
                 var objAddress = {
-                    SingleLine : dom.byId("taAddress").value
+                    "SingleLine" : dom.byId("taAddress").value
                 };
                 var params = {
                     address : objAddress,
@@ -108,13 +108,13 @@ require([
                         /*
                          * Step: Retrieve the result's geometry
                          */
-                        geometryLocation = candidate.Location;
+                        geometryLocation = candidate.location;
 
 
                         /*
                          * Step: Display the geocoded location on the map
                          */
-                        var graphicResult = new Graphic (geometryLocation, simbolMarker, attributesCandidate);
+                        var graphicResult = new Graphic (geometryLocation, symbolMarker, attributesCandidate);
                         mapMain.graphics.add(graphicResult);
 
 
