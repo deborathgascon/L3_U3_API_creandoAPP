@@ -5,7 +5,7 @@ require([
         "esri/layers/FeatureLayer",
 
         "esri/toolbars/draw",
-        "esri/Graphic",
+        "esri/graphic",
 
         "esri/symbols/SimpleFillSymbol",
         "esri/symbols/SimpleLineSymbol",
@@ -152,6 +152,7 @@ require([
                 /*
                  * Step: Initialize the query
                  */
+                
 
 
                 /*
